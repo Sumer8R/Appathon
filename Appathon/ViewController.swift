@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var CounterLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    var count = 0
+    
+    @IBAction func Counter() {
+        count += 1
+        CounterLabel.text = "Counter: " + String(count)
+    }
 
+    @IBAction func decCounter() {
+        count -= 1
+        CounterLabel.text = "Counter: " + String(count)
+    }
 }
 
